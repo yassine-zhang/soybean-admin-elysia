@@ -13,4 +13,4 @@ new Elysia()
     }),
   )
   .use(authPlugin({ prefix: "/auth" }))
-  .listen(3000);
+  .listen(9094);

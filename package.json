@@ -7,7 +7,10 @@
     "build": "bun build src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts",
     "test": "bun test",
-    "prepare": "husky install"
+    "prepare": "bun check-and-run",
+    "check-and-run": "if [[ $(uname) == 'Linux' && -e /etc/debian_version ]]; then bun unknown-command; else bun husky-install; fi",
+    "unknown-command": "echo 'This is Debian environment, running script1'",
+    "husky-install": "husky install"
   },
   "devDependencies": {
     "bun-types": "latest",

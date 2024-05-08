@@ -54,3 +54,11 @@ Authorization : Bearer token
   "msg": "请求成功"
 }
 ```
+
+## Deploy
+
+### docker
+
+```bash
+docker buildx build --push --platform linux/amd64 -t xx.xxx.xx.xxx:5000/soybean-admin-elysia:latest .
+```
